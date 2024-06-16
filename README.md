@@ -11,8 +11,8 @@ The "Check the index" web app helps you to track one of the following stock inde
 - <img src="https://raw.githubusercontent.com/Nholo7/check-index/master/static/images/apple-icon.svg" alt="meta" width="2%"> Apple
 - <img src="https://raw.githubusercontent.com/Nholo7/check-index/master/static/images/nvidia-icon.svg" alt="meta" width="2%"> Nvidia
 
-You can always refresh the current index with the Refresh button, or you can let it refresh automatically every minute.
-Note: the refresh is not available in the online test link.
+You can always refresh the current index with the Refresh button, or you can let it refresh automatically every minute.    
+**Note**: the refresh is not available in the online test link.
 
 ## Step for local test
 ### Install python
