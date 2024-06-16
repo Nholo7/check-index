@@ -1,0 +1,118 @@
+.container {
+	min-height: 500px;
+	max-height: 500px;
+}
+
+/* 
+* Title style
+*/
+h1 {
+	border-bottom: 2px #eee solid;
+	color: #3081b9;
+	text-align: center;
+	padding: 10px;
+	font-family: "Roboto Slab", serif;
+	font-size: 75px;
+}
+
+/* 
+* Image style
+*/
+img {
+	object-fit: contain;
+}
+
+/* 
+* ButtonRow style
+*/
+.buttonRow {
+	align-items: center;
+	text-align: center;
+}
+.btn {
+	padding: 10px;
+	border: 1px #eee solid;
+}
+.btn:hover {
+	background-color: #3081b9;
+}
+.btn.selected {
+	padding: 10px;
+	border: 1px #eee solid;
+	background-color: #5ea6d8;
+}
+.btn.selected:hover {
+	background-color: #3081b9;
+}
+.icon {
+	align-items: center;
+	height: 20px;
+	width: 25px;
+}
+
+/* 
+* Title style
+*/
+.spanner{
+	position:absolute;
+	top: 50%;
+	left: 0;
+	background: #2a2a2aa6;
+	width: 100%;
+	display:block;
+	text-align:center;
+	height: 100%;
+	color: #FFF;
+	transform: translateY(-50%);
+	z-index: 1000;
+	visibility: hidden;
+}
+
+/* 
+* Spinner style
+*/
+.spinner {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height:60px;
+	width:60px;
+	margin:0px auto;
+	-webkit-animation: rotation .6s infinite linear;
+	-moz-animation: rotation .6s infinite linear;
+	-o-animation: rotation .6s infinite linear;
+	animation: rotation .6s infinite linear;
+	border-left:6px solid rgba(0,174,239,.15);
+	border-right:6px solid rgba(0,174,239,.15);
+	border-bottom:6px solid rgba(0,174,239,.15);
+	border-top:6px solid rgb(0, 175, 239);
+	border-radius:100%;
+}
+@-webkit-keyframes rotation {
+	from {-webkit-transform: rotate(0deg);}
+	to {-webkit-transform: rotate(359deg);}
+}
+@-moz-keyframes rotation {
+	from {-moz-transform: rotate(0deg);}
+	to {-moz-transform: rotate(359deg);}
+}
+@-o-keyframes rotation {
+	from {-o-transform: rotate(0deg);}
+	to {-o-transform: rotate(359deg);}
+}
+@keyframes rotation {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(359deg);}
+}
+.show{
+	visibility: visible;
+}
+.spanner{
+	opacity: 0;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.spanner.show, .overlay.show {
+	opacity: 1
+}

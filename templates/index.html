@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<h1>{% block title %} Check the Index {% endblock %}</h1>
+	<!-- Spinner -->
+	<div class="spanner">
+		<div class="spinner"></div>
+	</div>
+	<!-- Button row for indexes and refresh -->
+	<div class="buttonRow">
+		<button class="btn selected">
+			<img id="META" class="icon" alt="Meta index" src="{{ url_for('static', filename= 'images/meta-icon.svg') }}"/>
+		</button>
+		<button class="btn">
+			<img id="GOOG" class="icon" alt="Alphabet index" src="{{ url_for('static', filename= 'images/google-color-icon.svg') }}"/>
+		</button>
+		<button class="btn">
+			<img id="AAPL" class="icon" alt="Apple index" src="{{ url_for('static', filename= 'images/apple-icon.svg') }}"/>
+		</button>
+		<button class="btn">
+			<img id="NVDA" class="icon" alt="Nvidia index" src="{{ url_for('static', filename= 'images/nvidia-icon.svg') }}"/>
+		</button>
+		<button class="btn">
+			<i id="refresh" alt="Refresh current index" class="fa fa-refresh icon"></i>
+		</button>
+	</div>
+	<!-- Index Graph -->
+	<img id="plot" src="data:image/png;base64,{{ plot }}"/>
+{% endblock %}
